@@ -106,7 +106,7 @@ def fuse_tiles(master, slave, pred, tile_size):
     """
     fused_image = np.zeros_like(master)
     height, width, bands = master.shape
-    
+
     for i in tqdm(range(0, height, tile_size), desc="Rows"):
         for j in range(0, width, tile_size):
             tile_h = min(tile_size, height - i)
